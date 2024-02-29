@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جهود الدوله لمواجهة تحديات الذكاء الاصطناعي</title>
+    <meta name="descripe" content="جهود الدوله لمواجهة تحديات الذكاء الاصطناعي">
+</head>
+<style>
+  .h{
+    font-size: 50px;
+    text-align: center;
+}
+
+.p{
+    text-align: right;
+    font-size: 25px;
+}
+.body{
+    background-color: aqua;
+}
+.h{
+text-align: center;
+
+display: block;
+margin: auto;
+
+}
+.j{
+    font-size: 15px;
+    display: block;
+     margin: auto;
+    }
+    .w{
+        font-size: 25px;
+        text-align: center;
+    }
+    .q{
+        font-size: 20px;
+        text-align: right;
+    }
+    .g{
+        width: 500px;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+      transition: 0.5s;
+    }
+    
+    .sidebar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #818181;
+      display: block;
+    }
+    
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+    
+    
+    .open-sidebar-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 30px;
+    }
+    </style>
+<body class="body">
+    <img class="g" src="images.jpeg">
+    <br>
+    <h1 class="h">جهود الدوله لمواجهة تحديات الذكاء الاصطناعي</h1>
+    <br>
+    <p class="h">استمع</p>
+    <br>
+    <audio class="h" src="جهود الدوله.mp3" controls></audio>
+    <br>
+    <p class="p">
+        ١-استراتيجية الذكاء الاصطناعي القومية: في عام 2019، أطلقت الحكومة المصرية استراتيجية الذكاء الاصطناعي القومية لتطوير هذا القطاع وتعزيز تبادل المعرفة والابتكار في هذا المجال
+<br>
+<br>
+٢-مركز بحوث الذكاء الاصطناعي: تم إنشاء مركز بحوث الذكاء الاصطناعي في جامعة القاهرة بهدف دعم البحث والتطوير في مجال الذكاء الاصطناعي وتوفير الدعم الفني والمعرفي
+<br>
+<br>
+٣-تعليم الذكاء الاصطناعي: تم دمج مواد الذكاء الاصطناعي في مناهج التعليم العالي والتقني في الجامعات والمعاهد التقنية لضمان توافر الكفاءات والمهارات اللازمة لمجال الذكاء الاصطناعي
+<br>
+<br>
+٤-مسابقات وفعاليات: نظمت الحكومة مسابقات وفعاليات تهدف إلى تشجيع الشباب على الابتكار في مجال الذكاء الاصطناعي وتطوير حلول مبتكرة للمشاكل الوطنية
+<br>
+<br>
+٥-التعاون الدولي: قامت مصر بالتعاون مع الجهات الدولية والمؤسسات الدولية في مجال الذكاء الاصطناعي، مثل الأمم المتحدة والاتحاد الأوروبي والمنظمات الإقليمية، لتبادل الخبرات وتعزيز التعاون في هذا المجال
+ </p>
+ <h2 class="w">مواضيع اخري</h2>
+<br>
+<a href="الاستخدام الامن.html"><p class="q">الاستخدام الامن الذكاء الاصطناعي</p></a>
+<br>
+<a href="inde5.html"><p class="q">كيفية مواجهة مخاطر الذكاء الاصطناعي</p></a>
+ <br>
+ <a href="زكاء.html"><p class="q">استخدام الزكاء الاصطناعي</p></a>
+ <button class="j" onclick="goBack()">العودة للخلف</button>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+
+<button class="open-sidebar-btn" onclick="toggleSidebar()">☰</button>
+
+<div id="sidebar" class="sidebar">
+  <a href="index.html">الصفحة الرئيسية</a>
+  <a href="تواصل معنا.html">تواصل معنا</a>
+  <a href="سياسة الخصوصيه.html">سياسة الخصوصية</a>
+  <a href="زكاء.html">اغلاق</a>
+</div>
+
+<script>
+  function toggleSidebar() {
+    var sidebar = document.getElementById("sidebar");
+    if (sidebar.style.width === "250px") {
+      sidebar.style.width = "0";
+      document.getElementsByClassName("content")[0].style.marginLeft = "0";
+    } else {
+      sidebar.style.width = "250px";
+      document.getElementsByClassName("content")[0].style.marginLeft = "250px";
+    }
+  }
+  
+  function closeSidebar() {
+    var sidebar = document.getElementById("sidebar");
+    if (sidebar.style.width === "250px") {
+      sidebar.style.width = "0";
+      document.getElementsByClassName("content")[0].style.marginLeft = "0";
+    }
+  }
+  
+</script>
+</body>
+</html>

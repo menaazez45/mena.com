@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اتصل بنا</title>
+
+</head>
+<style>
+  .container {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  .h{
+    font-size: 50px;
+    text-align: center;
+}
+
+.p{
+    text-align: right;
+    font-size: 25px;
+}
+.body{
+    background-color: aqua;
+}
+.h{
+text-align: center;
+
+display: block;
+margin: auto;
+
+}
+.j{
+    font-size: 15px;
+    display: block;
+     margin: auto;
+    }
+    .w{
+        font-size: 25px;
+        text-align: center;
+    }
+    .q{
+        font-size: 20px;
+        text-align: right;
+    }
+    .g{
+        width: 500px;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+      transition: 0.5s;
+    }
+    
+    .sidebar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #818181;
+      display: block;
+    }
+    
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+    
+    
+    .open-sidebar-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 30px;
+    }
+
+</style>
+<body>
+
+<div class="container">
+  <h2>اتصل بنا</h2>
+  <form id="contactForm" action="mailto:menaazez217@gmail.com" method="post">
+    <label for="name">الاسم:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">البريد الإلكتروني:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="message">الرسالة:</label>
+    <textarea id="message" name="message" required></textarea>
+    <button type="submit" id="submitBtn">إرسال</button>
+  </form>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var form = document.getElementById("contactForm");
+  var submitButton = document.getElementById("submitBtn");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // منع إرسال النموذج
+    
+    // التحقق من صحة البريد الإلكتروني
+    var emailInput = document.getElementById("email");
+    var email = emailInput.value.trim();
+    if (!validateEmail(email)) {
+      alert("الرجاء إدخال بريد إلكتروني صحيح.");
+      emailInput.focus();
+      return false;
+    }
+
+    // إرسال النموذج إلى الخادم
+    form.submit();
+  });
+
+  function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  }
+});
+</script>
+
+
+<button class="open-sidebar-btn" onclick="toggleSidebar()">☰</button>
+
+<div id="sidebar" class="sidebar">
+  <a href="index.html">الصفحة الرئيسية</a>
+  <a href="سياسة الخصوصيه.html">سياسة الخصوصية</a>
+  <a href="تواصل معنا.html">اغلاق</a>
+</div>
+
+<script>
+  function toggleSidebar() {
+    var sidebar = document.getElementById("sidebar");
+    if (sidebar.style.width === "250px") {
+      sidebar.style.width = "0";
+      document.getElementsByClassName("content")[0].style.marginLeft = "0";
+    } else {
+      sidebar.style.width = "250px";
+      document.getElementsByClassName("content")[0].style.marginLeft = "250px";
+    }
+  }
+  
+  function closeSidebar() {
+    var sidebar = document.getElementById("sidebar");
+    if (sidebar.style.width === "250px") {
+      sidebar.style.width = "0";
+      document.getElementsByClassName("content")[0].style.marginLeft = "0";
+    }
+  }
+  
+</script>
+
+</body>
+</html>
